@@ -8,16 +8,19 @@ endif (OSI_INCLUDES AND OSI_LIBRARIES)
 
 find_path(OSI_INCLUDES
   NAMES
-  coin/config_osi.h
+#  coin/config_osi.h
+  coin/Osiconfig.h
   PATHS
-  ${OSIDIR}/include
+  /usr/local/opt/osi/include/osi
+#  ${OSIDIR}/include
   ${INCLUDE_INSTALL_DIR}
 )
 
 find_library(OSI_LIBRARIES
   Osi
   PATHS
-  ${OSIDIR}/lib
+  /usr/local/opt/osi/lib
+#  ${OSIDIR}/lib
   ${LIB_INSTALL_DIR}
 )
 
@@ -25,7 +28,8 @@ find_library(OSI_LIBRARIES
 find_library(OSICLP_LIBRARIES
   OsiClp
   PATHS
-  ${OSIDIR}/lib
+  /usr/local/opt/osi/lib
+#  ${OSIDIR}/lib
   ${LIB_INSTALL_DIR}
 )
 

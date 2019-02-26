@@ -8,14 +8,16 @@ find_path(COINUTILS_INCLUDES
   NAMES
   coin/CoinPragma.hpp
   PATHS
-  $ENV{CLPDIR}/include
+  /usr/local/opt/coinutils/include/coinutils
+#  $ENV{CLPDIR}/include
   ${INCLUDE_INSTALL_DIR}
 )
 
 find_library(COINUTILS_LIBRARIES
   CoinUtils
   PATHS
-  $ENV{CLPDIR}/lib
+  /usr/local/opt/coinutils/lib
+#  $ENV{CLPDIR}/lib
   ${LIB_INSTALL_DIR}
 )
 
@@ -24,4 +26,3 @@ find_package_handle_standard_args(CoinUtils DEFAULT_MSG
                                   COINUTILS_INCLUDES COINUTILS_LIBRARIES)
 
 mark_as_advanced(COINUTILS_INCLUDES COINUTILS_LIBRARIES)
-

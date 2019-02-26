@@ -8,14 +8,16 @@ find_path(CGL_INCLUDES
   NAMES
   coin/CglConfig.h
   PATHS
-  $ENV{CGLDIR}/include
+  /usr/local/opt/cgl/include/cgl
+#  $ENV{CGLDIR}/include
   ${INCLUDE_INSTALL_DIR}
 )
 
 find_library(CGL_LIBRARIES
   Cgl
   PATHS
-  $ENV{CGLDIR}/lib
+  /usr/local/opt/cgl/lib
+#  $ENV{CGLDIR}/lib
   ${LIB_INSTALL_DIR}
 )
 
@@ -24,4 +26,3 @@ find_package_handle_standard_args(Cgl DEFAULT_MSG
                                   CGL_INCLUDES CGL_LIBRARIES)
 
 mark_as_advanced(CGL_INCLUDES CGL_LIBRARIES)
-
