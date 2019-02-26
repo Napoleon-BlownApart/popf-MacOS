@@ -1,4 +1,9 @@
-# popf
+# popf  (For MacOS)
+
+**Kludge required:** In order to fix a #include <values.h>, it is (currently) necessary to create a symlink in:
+*/usr/local/opt/gcc@8/include/c++/8.3.0*  that links:  *values.h@ -> tr1/limits.h*
+
+
 The POPF planner from KCL planning group with some modifications to make it work with "modern" compilers...
 === POPF1.1 ===
 
