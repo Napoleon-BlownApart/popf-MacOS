@@ -17,7 +17,7 @@ if(STATIC_POPF)
 set(CMAKE_CXX_LINK_FLAGS "-static ${CMAKE_CXX_LINK_FLAGS}")
 endif(STATIC_POPF)
 
-include_directories(${val_SOURCE_DIR} ${val_SOURCE_DIR}/parsing ${val_BINARY_DIR} ${CLP_INCLUDES}/coin ${CBC_INCLUDES}/coin ${CPLEX_INCLUDES} ${CONCERT_INCLUDES})
+include_directories(/usr/local/opt/flex/include ${val_SOURCE_DIR} ${val_SOURCE_DIR}/parsing ${val_BINARY_DIR} ${COINUTILS_INCLUDES}/coin ${CGL_INCLUDES}/coin ${OSI_INCLUDES}/coin ${CLP_INCLUDES}/coin ${CBC_INCLUDES}/coin ${CPLEX_INCLUDES} ${CONCERT_INCLUDES})
 
 set(popf_build_srcs
     totalordertransformer.cpp
